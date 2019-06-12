@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Script;
+    src: url(../../resources/fonts/SCRIPTBL.TTF);
+}
+
+.logo {
+    font-family: Script;
+    font-weight: 500;
+    font-size: 40px;
+    // color: white;
+    cursor: pointer;
+    transition: border 0.2s, padding 0.2s, transform 0.5s;
+}
+
+.logo:hover {
+    border: 1px solid;
+    padding: 5px;
+    transform: rotate(360deg);
+}   
+

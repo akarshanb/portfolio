@@ -1,0 +1,125 @@
+.flex-desk-fixed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.header.transparent {
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    a {
+        color: white;
+    }
+    .logo {
+        color: white;
+        border-color: white; 
+    }
+}
+
+.header.white {
+    // position: fixed;
+    background-color: white;
+    box-shadow: 0 3px 6px 0 rgba(108, 108, 108, 0.16);
+    a {
+        color: #131313;
+    }
+    a:hover {
+        color: #DF337D;
+    }
+    .logo {
+        color: #DF337D;
+        border-color: #DF337D; 
+    }
+}
+
+@keyframes mymove {
+  0%   {height: 0px;}
+  100% {height: 86px;}
+}
+
+nav {
+    // position: fixed;
+    height: 86px;
+    width: 100%;
+    text-align: left;
+    z-index: 99;
+    color: white;
+    // box-shadow: 0 3px 6px 0 rgba(108, 108, 108, 0.16);
+    animation: mymove 1s ;
+}
+
+@keyframes move-name {
+//   0%   {left: -400px; position: relative}
+//   100% {left: 0px; position: relative}
+}
+
+.header-author-name {
+  animation: move-name 1s;
+}
+
+@keyframes move-header-links {
+  0%   {left: 400px; position: relative}
+  100% {left: 0px; position: relative}
+}
+
+.header-links {
+  animation: move-header-links 1s;
+}
+  
+  nav .header-author-name {
+    // color: #4968eb;
+    line-height: 1.36;
+    font-size: 1.8em;
+    font-weight: 900;
+    font-family: 'Muli';
+    font-style: normal;
+    letter-spacing: normal;
+    font-stretch: normal;  
+    margin-left: 2em;
+  }
+
+  nav .header-links {
+    margin-left: auto;
+    margin-right: 1em;
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+  }
+
+  nav .header-links > div {
+    margin-right: 2em;
+  }
+
+  .header-links > a{
+    // margin-right: 2em;
+    text-decoration: none;
+    font-size: 16px;
+    // font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: normal;
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    transition: font-weight 0.1s linear;
+    // display: inline-block;
+    // position: relative;
+  } 
+
+  .header-links > a:hover{
+    // font-weight: 500; 
+    font-family: Muli_black;
+  } 
+
+//   .header-links .active {
+//     font-family: Muli_black;
+//   }
+
+  @media screen and (max-width: 800px) {
+    nav {
+      display:none !important; 
+    }
+  }

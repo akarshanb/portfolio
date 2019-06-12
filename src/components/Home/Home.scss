@@ -1,0 +1,40 @@
+.home {
+    height: 100vh;
+}
+
+.homeImg {
+    background: linear-gradient(0deg,rgba(131,103,123,0.5),rgba(131,103,123,0.5)),url('../../resources/home.jpg');
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+.mainHeading {
+    font-size: 60px;
+}
+
+.secondHeading {
+    font-size: 20px;
+}
+
+.workbutton {
+    font-size: 16px;
+    padding: 10px 70px 10px 70px;
+    margin-top: 6%;
+    background-color: rgba(89, 76, 83, 0.53);
+    border: 1px solid white;
+    transition-property: background-color color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    cursor: pointer;
+    transform: translate(0px, 100px);
+}
+
+.workbutton:hover {
+    background-color: white;
+    color: black;
+    opacity: 0.7;
+}

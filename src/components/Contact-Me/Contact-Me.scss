@@ -1,0 +1,116 @@
+// .contactMe {
+//     // height: 100vh;
+//     margin-top: 50px;
+//     // background-color: red;
+//     .bg1 {
+//         // position: absolute;
+//         transform: skewY(-2.5deg);
+//         margin-top: 5%;
+//         margin-bottom: 5%;
+//         background-color: rgba(209, 187, 202, 0.22);
+//         height: 80%;
+//     }
+//     .bg2{
+//         // position: absolute;
+//         transform: skewY(2.5deg);
+//         margin-top: 5%;
+//         margin-bottom: 5%;
+//         background-color: rgba(209, 187, 202, 0.22);
+//         height: 80%;
+//     }
+
+// }
+
+
+
+.contactMe {
+    margin: 0; color: #efefef;
+    overflow:hidden;
+    // position: relative;
+    height: 80%;
+    height: 80vh;
+    overflow: visible;
+    margin-top: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    .heading {
+        text-align: center;
+        margin-top: 10px;
+        .first {
+            font-size: 18px;
+            color: #DF337D;
+        }
+        .second {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #000000;
+        }
+        .input1, .input2 {
+            border-bottom: 1px solid #DF337D;
+            width: 15%;
+            input {
+                background-color: #ffffff00;
+                border: 0;
+                width: 100%
+            }
+            input:focus {
+                background-color: #ffffff00;
+                border: 0;
+                outline: none;
+            }
+        }
+        .input1::placeholder, .input2::placeholder {
+            color: #C3BDBD;
+        } 
+        .textarea {
+            margin-top: 2rem;
+            textarea {
+                background-color: white;
+                border: 1px solid #DF337D;
+                width: 53%;
+            }
+            textarea:focus {
+            }
+        }
+    }
+    .msgBox {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+    .row {
+        justify-content: space-evenly;
+    }
+  }
+  
+.contactMe::before{
+    content:"";
+    // position:absolute;
+    top:0;
+    left:0;
+    height: 100px;
+    width:100%;
+    transform: skewY(-4deg);
+    transform-origin: bottom left;
+    z-index: -1;
+    // background-color: #DF337D;
+    background-image: linear-gradient(to left, #d7aebf5c, #DF337D);
+}
+
+.contactMe::after{
+    content:"";
+    // position:absolute;
+    top:0;
+    left:0;
+    height: 100px;
+    width:100%;
+    transform: skewY(4deg);
+    transform-origin: bottom right;
+    z-index: -1;
+    background-image: linear-gradient(to left, #d7aebf5c, #DF337D);
+    // background-color: #DF337D;
+}
+
+

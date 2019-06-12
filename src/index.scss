@@ -1,0 +1,49 @@
+@font-face {
+  font-family: Muli;
+  src: url(resources/fonts/Muli.ttf);
+}
+@font-face {
+  font-family: Muli_black;
+  src: url(resources/fonts/Muli-Black.ttf);
+}
+@font-face {
+  font-family: Muli_bold;
+  src: url(resources/fonts/Muli-Bold.ttf);
+}
+
+@font-face {
+  font-family: Muli_SemiBold;
+  src: url(resources/fonts/Muli-SemiBold.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: Muli;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.pd0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.mr0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+hr {
+  width: 40px;
+  margin-top: 2rem !important;
+}
+

@@ -1,0 +1,20 @@
+.rowChart {
+    .bar { fill: #DF337D; }
+    text {
+        fill: black;
+        font-size: 13px;
+    }
+    .axis.x {
+        display: none;
+    }
+
+    .axis.y {
+        line, path {
+            display: none;
+        }
+    }
+
+    .rowChart {
+        text-align: left;
+    }
+}
