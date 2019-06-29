@@ -34,7 +34,7 @@ class Header extends React.Component {
          console.log(links[i])
          links2[i].addEventListener('click', (d) => {
            let text = links2[i].textContent;
-           this.scrollPage(text);
+           this.scrollPageHamburger(text);
          })
        }
 
@@ -42,7 +42,6 @@ class Header extends React.Component {
       //  let links = document.getElementsByClassName('header-links').querySelectorAll('a');
     }
     scrollPage(text) {
-      console.log(text);
       if( text.includes("HOME")) {
         this.handleScroll($('div.home'));
       } else if (text.includes("ABOUT ME")) {
@@ -52,6 +51,26 @@ class Header extends React.Component {
       } else if ( text.includes("CONTACT")) {
         this.handleScroll($('div.contactMe'));
       }
+    }
+
+    scrollPageHamburger(text) {
+      
+      $('.header .button_container').toggleClass('active');
+      $('#overlay').toggleClass('open');
+      
+      console.log(text);
+      setTimeout(()=> {
+        console.log("scrollllllllll");
+        if( text.includes("HOME")) {
+          this.handleScroll($('div.home'));
+        } else if (text.includes("ABOUT ME")) {
+          this.handleScroll($('div.aboutMe'));
+        } else if ( text.includes("PROJECTS")) {
+          this.handleScroll($('div.projects'));
+        } else if ( text.includes("CONTACT")) {
+          this.handleScroll($('div.contactMe'));
+        }
+      }, 200)
     }
 
     handleScroll = e => {
@@ -93,10 +112,10 @@ class Header extends React.Component {
                   <div className="overlay" id="overlay">
                     <nav className="overlay-menu">
                       <ul>
-                        <li className="home"><a>Home</a></li>
-                        <li className="about"><a>About</a></li>
-                        <li className="projects"><a>Projects</a></li>
-                        <li className="contact"><a>Contact</a></li>
+                        <li className="home"><a>HOME</a></li>
+                        <li className="about"><a>ABOUT ME</a></li>
+                        <li className="projects"><a>PROJECTS</a></li>
+                        <li className="contact"><a>CONTACT</a></li>
                       </ul>
                     </nav>
                   </div>
