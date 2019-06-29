@@ -12,6 +12,21 @@ let style = {
 }
 
 class Projects extends React.Component {
+    constructor(props) {
+        super(props)
+        this.layoutRef = React.createRef();
+        this.firstRef = React.createRef();
+        this.secondRef = React.createRef();
+        this.thirdRef = React.createRef();
+        this.handleHover = this.handleHover.bind(this);
+        this.onClick = this.onClick.bind(this);
+    }
+    handleHover = () => {
+        console.log("HOVER");
+    }
+    onClick = (ref) => {
+        console.log(ref)
+    }
     render() {
         return (
             <div>
@@ -22,10 +37,43 @@ class Projects extends React.Component {
                         <hr></hr>
                     </div>
 
-                    <div className="layout">
-                        <ProjectBox type="AWA" id="a" img= {img} content="AWA"/>
-                        <ProjectBox type="ARIS" id="b" img= {img3} content="ARIS" />
-                        <ProjectBox type="AFLS" id="c" img= {img2} content="AFLS" />
+                    <div className="layout row" ref={this.layoutRef}>
+                        <div className="col-md-4 col-sm-12 first" ref={this.firstRef}  onClick={this.onClick(this.firstRef)}>
+                            <div>
+                                <span>
+                                    FREIGHT & 
+                                </span>
+                                <span>
+                                    LOGISTICS
+                                </span>
+                                <span>
+                                    SOFTWARE
+                                </span>
+                            </div>
+                        </div>
+                        <div className="col-md-4 col-sm-12 second" ref={this.secondRef} onClick={this.onClick(this.secondRef)}>
+                            <div>
+                                <span>
+                                    INTELLIGENT
+                                </span>
+                                <span>
+                                    RESOURCES
+                                </span>
+                                <span>
+                                    SOLUTION
+                                </span>
+                            </div>
+                        </div>
+                        <div className="col-md-4 col-sm-12 third" ref={this.thirdRef} onClick={this.onClick(this.thirdRef)}>
+                            <div>
+                                <span>
+                                    WATER
+                                </span>
+                                <span>
+                                    ANALYTICS
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
@@ -33,51 +81,11 @@ class Projects extends React.Component {
         );
     }
 
-    // componentDidMount() {
+    componentDidMount() {
 
-    //     let svg = d3.select(".layout svg");
+    }
 
-    //     svg.append("defs")
-    //         .append('pattern')
-    //         .attr('id', 'locked2')
-    //         .attr('patternUnits', 'userSpaceOnUse')
-    //         .attr('width', 10200)
-    //         .attr('height', 800)
-    //         .append("image")
-    //         .attr("xlink:href", img)
-    //         .attr('width', 1200)
-    //         .attr('height', 800);
 
-    //     let path = svg
-    //         .append("path")
-    //         // trying to draw a diamond here 
-    //         .attr("d", "M 250 0 400 125 250 250 0 125Z")
-    //         .style("stroke-width", 1)
-    //         .style("stroke-dasharray", "1,0")
-    //         .style("fill", 'url(#locked2)')
-    //         .on('mouseover', () => {
-    //             d3.select('path').style('fill', 'url(#locked2')
-    //             .style('opacity', 0.4)
-
-    //             d3.select('text').style('stroke', '#686161').attr("fill", "#686161");
-    //         })
-    //         .on('mouseout', () => {
-    //             d3.select('path').style('fill', 'url(#locked2').style('opacity', 1)
-    //             d3.select('text').style('stroke', 'white').attr("fill", "white");
-    //         });
-
-    //         append();
-
-    //         function append()  {
-    //             svg.append("text")
-    //             .text("WATER ANALYTICS")
-    //             .attr("transform", "translate(150,125)")
-    //             .attr("font-family","Muli")
-    //             .attr("stroke", "white")
-    //             .attr("fill", "white")
-    //             .style("font-size", "20px");
-    //         }
-    // }
 }
 
 export default Projects;

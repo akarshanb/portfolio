@@ -6,7 +6,7 @@ class RowChart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [{skill: "CSS", value: 80},{skill: "HTML", value: 70},{skill: "JS", value: 85},{skill: "ANGULAR", value: 90},{skill: "REACT", value: 60},{skill: "D3", value: 60},{skill: "NODE JS", value: 65},{skill: "UI DESIGN", value: 70},{skill: "XD", value: 65}],
+            data: [{skill: "CSS", value: 80},{skill: "HTML", value: 70},{skill: "JS", value: 85},{skill: "ANGULAR", value: 90},{skill: "REACT", value: 75},{skill: "D3", value: 70},{skill: "NODE JS", value: 65},{ skill: "JAVA", value: 65},{skill: "UI DESIGN", value: 70},{skill: "XD", value: 65}],
             yAxisAttribute: "skill",
             xAxisAttribute: "value",
             width: 0,

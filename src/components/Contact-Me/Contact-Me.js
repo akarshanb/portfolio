@@ -28,7 +28,12 @@ class ContactMe extends React.Component {
                                 <div className="row textarea col-xs-12 mr0">
                                         <textarea  rows="5" cols="112" placeholder="Enter Message">
                                         </textarea>
-                                    </div>
+                                </div>
+                                <div className="row sendButtonContainer col-xs-12 mr0">
+                                    <div className="sendButton">
+                                        <span>SEND</span>
+                                    </div>  
+                                </div>
                     </div>
                     <div>
                     
