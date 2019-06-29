@@ -13,8 +13,6 @@ const imgHeight = 87 *1.2;
 class AboutMe extends React.Component {
     render() {
         return (
-            <div>
-                {/* <Header type={'white'}/> */}
                 <div className="aboutMe">
                     <div className="heading col-xs-12">
                         <span>ABOUT ME</span>
@@ -27,7 +25,7 @@ class AboutMe extends React.Component {
                     </div>
                     <div className=" content col-xs-12">
                         <div className="row mr0">
-                            <div className="col-12 col-md-6">
+                            <div className="col-12 col-md-6 icons">
                                 <div className="row first">
                                     <div className="col-xs-6 icon">
                                         <img alt=""
@@ -69,12 +67,11 @@ class AboutMe extends React.Component {
                                 </div>
                             </div>                             
                         </div>
-                            <div className="col-12 col-md-6"><RowChart /></div>
+                            <div className="col-12 col-md-6 chart"><RowChart /></div>
                             
                         </div>
                     </div>
                 </div>
-            </div>
         );
     }
 }

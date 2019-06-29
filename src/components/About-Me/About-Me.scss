@@ -1,5 +1,5 @@
 .aboutMe {
-    height: 100vh;
+    height: 100%;
     color: black;
     text-align: center;
     .heading {
@@ -22,6 +22,9 @@
         }
         .row {
             justify-content: space-evenly;
+            // div.chart, div.icons {
+            //     height: 400px;
+            // }
         }
         .row.second {
             margin-top: 2rem;
@@ -42,14 +45,14 @@
 
 }
 
-@media only screen and (max-width: 700px) {
-    .aboutMe {
-        height: 210vh;
-    }
-  }
+// @media only screen and (max-width: 700px) {
+//     .aboutMe {
+//         height: 240vh;
+//     }
+//   }
 
-@media only screen and (max-width: 1200px) and (min-width: 700px) {
-    .aboutMe {
-        height: 125vh;
-    }
-}
+// @media only screen and (max-width: 1200px) and (min-width: 700px) {
+//     .aboutMe {
+//         height: 125vh;
+//     }
+// }
