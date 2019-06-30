@@ -22,7 +22,7 @@ class RowChart extends React.Component {
     }
     componentDidMount() {
         let width = this.setWidth()
-        let height = document.getElementsByClassName("rowChart")[0].parentElement.offsetHeight + 50;
+        let height = document.getElementsByClassName("rowChart")[0].parentElement.offsetHeight;
         this.setState({width: width, height: height}, ()=> {
             this.drawChart = this.drawChart.bind(this);
             this.drawChart();

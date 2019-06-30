@@ -35,6 +35,9 @@
     .button_container.active span {
       background-color: black;
     }
+    .button_container:hover span {
+      background-color: white;
+    }
 }
 
 .header.white {
@@ -60,6 +63,9 @@
     }
     .button_container.active span {
       background-color: black;
+    }
+    .button_container:hover span {
+      background-color: #DF337D;
     }
 }
 

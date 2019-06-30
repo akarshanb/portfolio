@@ -112,10 +112,10 @@ class Header extends React.Component {
                   <div className="overlay" id="overlay">
                     <nav className="overlay-menu">
                       <ul>
-                        <li className="home"><a>HOME</a></li>
-                        <li className="about"><a>ABOUT ME</a></li>
-                        <li className="projects"><a>PROJECTS</a></li>
-                        <li className="contact"><a>CONTACT</a></li>
+                        <li className="overlay-home"><a>HOME</a></li>
+                        <li className="overlay-about"><a>ABOUT ME</a></li>
+                        <li className="overlay-projects"><a>PROJECTS</a></li>
+                        <li className="overlay-contact"><a>CONTACT</a></li>
                       </ul>
                     </nav>
                   </div>

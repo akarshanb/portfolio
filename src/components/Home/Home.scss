@@ -38,3 +38,16 @@
     color: black;
     opacity: 0.7;
 }
+
+@media only screen and (max-width: 700px) {
+    .workbutton {
+        transform: translate(0px, 75px);
+    }
+    .mainHeading {
+        font-size: 35px;
+    }
+    .secondHeading {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}

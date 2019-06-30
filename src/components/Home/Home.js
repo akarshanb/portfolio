@@ -72,7 +72,7 @@ class Home extends React.Component {
     setHeaderLinks(type) {
         this.removeActiveClasses();
         $('.header-links a.header-'+type)[0].classList.add('active');
-        $('.overlay-menu .'+type+ ' a')[0].classList.add('active');
+        $('.overlay-menu .overlay-'+type+ ' a')[0].classList.add('active');
     }
 
     removeActiveClasses() {

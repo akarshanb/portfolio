@@ -45,11 +45,11 @@
 
 }
 
-// @media only screen and (max-width: 700px) {
-//     .aboutMe {
-//         height: 240vh;
-//     }
-//   }
+@media only screen and (max-width: 700px) {
+    .aboutMe .rowChart {
+        margin-top: 50px;
+    }
+  }
 
 // @media only screen and (max-width: 1200px) and (min-width: 700px) {
 //     .aboutMe {

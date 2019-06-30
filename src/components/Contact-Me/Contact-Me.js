@@ -6,8 +6,6 @@ import * as d3 from 'd3';
 class ContactMe extends React.Component {
     render() {
         return (
-            <div>
-                {/* <Header type={'white'}/> */}
                 <div className="contactMe">
                     <div className="heading col-xs-12">
                                 <div className="first">
@@ -39,8 +37,6 @@ class ContactMe extends React.Component {
                     
                     </div>
                 </div>
-
-            </div>
         );
     }
 
