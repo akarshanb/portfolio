@@ -22,7 +22,7 @@ class RowChart extends React.Component {
     }
     componentDidMount() {
         let width = this.setWidth()
-        let height = document.getElementsByClassName("rowChart")[0].parentElement.offsetHeight;
+        let height = document.getElementsByClassName("rowChart")[0].parentElement.offsetHeight + 50;
         this.setState({width: width, height: height}, ()=> {
             this.drawChart = this.drawChart.bind(this);
             this.drawChart();
@@ -125,6 +125,24 @@ class RowChart extends React.Component {
             .attr("fill", "#DF337D")
             .transition(d3.transition().duration(1000))
                 .attr("width", (d) => x(d[this.state.xAxisAttribute]))
+            // .append("text")
+            //     .text(d => d[this.state.xAxisAttribute])
+            //     .attr("font-family","Muli");
+            
+            svg.selectAll(".label")
+                .data(this.state.data)
+                .enter()
+                .append("text")
+                .text(d => d[this.state.xAxisAttribute]+"%")
+                .attr("font-family","Muli")
+                .attr("height", y.bandwidth() -10 )
+                .attr("width", 0)
+                .attr("fill", "#131313")
+                .attr("x", x(0) )
+                .attr("y", (d) => y(d[this.state.yAxisAttribute]) + 17)
+                .transition(d3.transition().duration(1000))
+                    .attr("x", (d) => x(d[this.state.xAxisAttribute] + 2));
+                
 
 
     }
