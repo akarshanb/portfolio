@@ -92,6 +92,8 @@ class RowChart extends React.Component {
         svg.append("g")
             .attr('class','axis y')
             .call(d3.axisLeft(y))
+            .selectAll("text")
+            .attr("dy", null)
 
         d3.select(".axis.y").attr("font-family","Muli_SemiBold");
 
@@ -135,6 +137,8 @@ class RowChart extends React.Component {
                 .append("text")
                 .text(d => d[this.state.xAxisAttribute]+"%")
                 .attr("font-family","Muli")
+                .attr("class", "bar-label")
+                .attr("font-size", "10px")
                 .attr("height", y.bandwidth() -10 )
                 .attr("width", 0)
                 .attr("fill", "#131313")

@@ -138,5 +138,15 @@
     background-color: #f2ebf1;
 }
 
+@media only screen and (max-width: 700px) {
+    .contactMe .heading .input1, 
+    .contactMe .heading .input2 {
+        width: 34.5%;
+    }
+    .contactMe .heading .textarea textarea {
+        width: 80%;
+    }
+}
+
 
 
