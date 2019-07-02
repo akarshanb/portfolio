@@ -15,7 +15,9 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-transition-group": "^4.1.0"
+    "react-transition-group": "^4.1.0",
+    "scroll": "^3.0.1",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
     "start": "react-scripts start",

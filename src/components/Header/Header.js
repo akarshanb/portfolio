@@ -2,12 +2,14 @@ import React from "react";
 import './Header.scss';
 import Logo from '../Logo/Logo';
 import $ from "jquery";
+import smoothscroll from 'smoothscroll-polyfill';
 
 class Header extends React.Component {
     clickMethod(e){
       console.log(e);
     }
     componentDidMount() {
+      smoothscroll.polyfill();
       $('#toggle').click(function() {
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
@@ -74,11 +76,8 @@ class Header extends React.Component {
     }
 
     handleScroll = e => {
-      window.scrollTo({
-        top: e[0].offsetTop - 100,
-        left: 0,
-        behavior: "smooth"
-      });
+      console.log(e[0].offsetTop);
+      window.scrollTo({ top: e[0].offsetTop - 100, left: 0, behavior: 'smooth' });
     }
 
     render() {

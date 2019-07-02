@@ -6,13 +6,16 @@ import ContactMe from "../Contact-Me/Contact-Me";
 import Projects from "../Projects/Projects";
 import Footer from "../Footer/Footer";
 import $ from 'jquery';
+import smoothscroll from 'smoothscroll-polyfill';
+ 
 
 class Home extends React.Component {
     constructor(props) {
         super(props);
         this.about = React.createRef();
         this.headerType="transparent";
-        this.headerHidden = "hidden-true";
+        this.headerHidden = "hidden-true";        
+        smoothscroll.polyfill();
       }
     render() {
         return (
@@ -88,14 +91,9 @@ class Home extends React.Component {
 
     handleScroll = e => {
         this.changeStyleHeader();
-        // this.headerType = "white";
-        // e.preventDefault();
         const about = this.about.current;
-        window.scrollTo({
-          top: about.offsetTop - 100,
-          left: 0,
-          behavior: "smooth"
-        });
+        window.scrollBy({ top: about.offsetTop - 100, left: 0, behavior: 'smooth' });
+        
       };
 
     changeStyleHeader(add, remove) {
