@@ -12,6 +12,7 @@ class RowChart extends React.Component {
             width: 0,
             height: 0,
         }
+        this.screenSize = window.width;
     }
 
     render() {
@@ -21,6 +22,7 @@ class RowChart extends React.Component {
         )
     }
     componentDidMount() {
+        localStorage.setItem("width", window.innerWidth)
         let width = this.setWidth()
         let height = document.getElementsByClassName("rowChart")[0].parentElement.offsetHeight + 50;
         this.setState({width: width, height: height}, ()=> {
@@ -29,10 +31,16 @@ class RowChart extends React.Component {
         });
         let resizedFn;
         window.addEventListener("resize", () => {
-            clearTimeout(resizedFn);
-            resizedFn = setTimeout(() => {
-                this.redrawChart();
-            }, 200)
+            let screen = this.screenSize;
+            console.log(localStorage.getItem("width"))
+            console.log(window.innerWidth)
+            if (Math.abs(localStorage.getItem("width") - window.innerWidth) > 2) {
+                localStorage.setItem("width", window.innerWidth)
+                clearTimeout(resizedFn);
+                resizedFn = setTimeout(() => {
+                    this.redrawChart();
+                }, 0)
+            }
         });
     }
 
